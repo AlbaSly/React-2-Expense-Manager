@@ -18,7 +18,7 @@ const BudgetManager = (props: BudgetManagerComponentProps): JSX.Element => {
     const [percentage, setPercentage]: [number, Dispatch<SetStateAction<number>>] = useState(0);
 
     const {
-        budgetState: {budget},
+        budgetState: {budget, setBudget},
         expenseListState: {expenseList, setExpenseList},
         loadedState: {loaded},
         validatedBudgetState: {setValidatedBudget}
@@ -65,8 +65,10 @@ const BudgetManager = (props: BudgetManagerComponentProps): JSX.Element => {
 
         if (!isConfirmed) return;
 
-        localStorage.removeItem(localStorageDataKey);
         setValidatedBudget(false);
+        setExpenseList([]);
+        setBudget({value: 0});
+        localStorage.removeItem(localStorageDataKey);
 
         swalert.fire('Deleted!', 'Your data has been reseted.', 'success');
     }
