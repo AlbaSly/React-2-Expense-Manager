@@ -14,7 +14,7 @@ const Header = (props: HeaderComponentProps): JSX.Element => {
 
     return (
         <header>
-            <h1>RaxExpense Manager</h1>
+            <h1>Expense Manager</h1>
 
             {
                 !validatedBudget
