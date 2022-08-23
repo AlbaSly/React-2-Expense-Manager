@@ -409,7 +409,7 @@ body .modal {
     justify-content: center;
     align-items: center;
     font-size: 2.4rem;
-    text-align: right;
+    text-align: center;
 }
 
 @keyframes fade {
@@ -419,5 +419,16 @@ body .modal {
 
     100% {
         opacity: 1;
+    }
+}
+
+.flex-helper {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .flex-helper {
+        flex-direction: row;
     }
 }
