@@ -123,7 +123,7 @@ const Modal = (props: ModalComponentProps): JSX.Element => {
                     alt="Close modal icon" />
             </div>
 
-            <form onSubmit={handleSubmit} className={`formulario ${animateModal ? 'animar' : 'cerrar'}`}>
+            <form onSubmit={handleSubmit} className={`formulario ${animateModal ? 'animar' : 'cerrar'}`} autoComplete="off">
                 <legend>New Expense</legend>
 
                 {alertInfo.msg && <Alert alertInfoState={alertInfoState} />} 
@@ -136,7 +136,7 @@ const Modal = (props: ModalComponentProps): JSX.Element => {
                         value={name}
                         onChange={(ev) => setName(ev.target.value)}
                         placeholder="Add the name of the expense" 
-                        autoComplete="false"
+                        autoComplete="off"
                     />
                 </div>
 
@@ -148,7 +148,7 @@ const Modal = (props: ModalComponentProps): JSX.Element => {
                         value={amount}
                         onChange={(ev) => setAmount(Number(ev.target.value))}
                         placeholder="Add the amount of the expense"
-                        autoComplete="false"
+                        autoComplete="off"
                     />
                 </div>
 
