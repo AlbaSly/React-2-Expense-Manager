@@ -46,6 +46,7 @@ const NewBudget = (props: NewBudgetComponentProps): JSX.Element => {
                         onChange={(ev) => setBudget({...budget, value: Number(ev.target.value)})} 
                         className="nuevo-presupuesto" 
                         placeholder="Add your budget"
+                        autoComplete="false"
                     />
                 </div>
 

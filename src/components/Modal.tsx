@@ -135,7 +135,9 @@ const Modal = (props: ModalComponentProps): JSX.Element => {
                         type="text"
                         value={name}
                         onChange={(ev) => setName(ev.target.value)}
-                        placeholder="Add the name of the expense" />
+                        placeholder="Add the name of the expense" 
+                        autoComplete="false"
+                    />
                 </div>
 
                 <div className="campo">
@@ -145,7 +147,9 @@ const Modal = (props: ModalComponentProps): JSX.Element => {
                         type="number"
                         value={amount}
                         onChange={(ev) => setAmount(Number(ev.target.value))}
-                        placeholder="Add the amount of the expense" />
+                        placeholder="Add the amount of the expense"
+                        autoComplete="false"
+                    />
                 </div>
 
                 <div className="campo">
