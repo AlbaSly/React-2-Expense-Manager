@@ -57,7 +57,7 @@ header h1 {
 }
 
 .formulario {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     padding: 10rem 0;
 }
@@ -79,7 +79,8 @@ header h1 {
 }
 .formulario .campo {
     display: grid;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem auto;
+    width: 90%;
 }
 
 .formulario label {
@@ -97,6 +98,7 @@ header h1 {
     border: none;
     flex: 1;
     font-size: 1.6rem;
+    width: 100%;
 }
 .formulario input[type="submit"] {
     background-color: #1048a4;
@@ -104,6 +106,8 @@ header h1 {
     padding: 1rem;
     text-align: center;
     margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
     color: var(--blanco);
     font-weight: 900;
     text-transform: uppercase;
@@ -111,10 +115,13 @@ header h1 {
     width: 100%;
     transition: background-color 300ms ease;
 }
+
 @media (min-width: 768px) {
     .formulario input[type="submit"] {
         display: block;
         padding: 1rem 5rem;
+        width: 90%;
+        margin: 0 auto;
     }
 }
 .formulario input[type="submit"]:hover {
@@ -129,8 +136,8 @@ header h1 {
     border-radius: 1rem;
     text-align: center;
     background-color: var(--gris-claro);
+    width: 100%;
 }
-
 .fade {
     animation: fade .3s ease-in;
 }
@@ -192,6 +199,8 @@ header h1 {
 .formulario input[type="number"].nuevo-presupuesto {
     font-size: 2.8rem;
     text-align: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .contenedor-presupuesto svg {
@@ -350,18 +359,25 @@ main {
 }
 .modal .cerrar-modal {
     position: absolute;
-    right: 3rem;
-    top: 3rem;
-    width: 3rem;
-    height: 3rem;
+    right: 2.5rem;
+    top: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 50;
 }
+
+.modal .cerrar-modal:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
 .modal .cerrar-modal img {
     width: 100%;
 }
 
 .modal .formulario {
-    max-width: 80rem;
-    width: 40rem;
+    max-width: 75rem;
+    width: 85%;
     transition-property: all;
     transition-duration: 300ms;
     transition-timing-function: ease-in;
