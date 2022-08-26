@@ -42,12 +42,13 @@ const Modal = (props: ModalComponentProps): JSX.Element => {
 
         if (disableSubmitEvent) return;
 
-        setDisableSubmitEvent(true);
-
         if ([name, amount, categoryName].some(value => !value || value === "null")) {
             setAlertInfo({type: 'error', msg: 'All fields are required', duration: 800});
+            setDisableSubmitEvent(false);
             return;
         }
+        
+        setDisableSubmitEvent(true);
 
         if (editingMode) {
             updateExpense();
